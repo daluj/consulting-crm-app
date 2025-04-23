@@ -1,0 +1,21 @@
+{
+    "name": "Flutter + Devbox",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "mounts": [
+      "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind"
+    ],
+    "postCreateCommand": "source ~/.devbox/profile && devbox shell",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dart-code.flutter"
+        ]
+      }
+    },
+    "remoteUser": "root"
+  }  

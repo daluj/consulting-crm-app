@@ -1,0 +1,13 @@
+{
+    "packages": [
+      "flutter",
+      "openjdk17",
+      "unzip",
+      "android-tools"
+    ],
+    "shell": {
+      "init_hook": [
+        "flutter doctor"
+      ]
+    }
+  }  
