@@ -1,7 +1,8 @@
 {
     "name": "Flutter + Devbox",
     "build": {
-      "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "context": ".."
     },
     "settings": {
       "terminal.integrated.defaultProfile.linux": "bash"

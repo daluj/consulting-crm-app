@@ -15,7 +15,7 @@ ENV PATH="/root/.devbox/bin:$PATH"
 
 # Pre-create devbox environment
 WORKDIR /workspace
-COPY devbox.json .
+COPY devbox.json ./
 RUN devbox install
 
 CMD [ "bash" ]
