@@ -6,9 +6,10 @@ RUN apt-get update && apt-get install -y \
     ca-certificates gnupg lsb-release \
     && apt-get clean
 
-# Install Devbox
-RUN curl -fsSL https://get.jetpack.io/devbox | bash && \
+# Install Devbox non-interactively
+RUN curl -fsSL https://get.jetpack.io/devbox | bash -s -- -f && \
     echo 'source ~/.devbox/profile' >> /root/.bashrc
+
 
 # Ensure devbox is available in container sessions
 ENV PATH="/root/.devbox/bin:$PATH"
